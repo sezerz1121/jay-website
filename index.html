@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+   
+</head>
+<body>
+    <div>
+        <img class="bg-image" src="./bg_img.png" alt="Background Image"/>
+    </div>
+<div class="page">
+    <div class="innerpage">
+        <div class="navbar">
+            <div class="navbarDateTime">
+                <div class="Date"><p id="DatePara"></p></div>
+                <div class="Time"><p id="TimePara"></p></div>  
+            </div>
+            <div class="navbarLanguage">
+                <div class="navbarLanguageTitle"><p>Select  Language</p></div>
+                <div class="navbarLanguageSelection">
+                    <select name="Language" id="Language">
+                        <option value="English">English</option>
+                        <option value="Gujarati">Gujarati</option>
+                      </select>
+                </div>
+                
+            </div>
+        </div>
+        <div class="Underline"></div>
+        <div class="OrgName">
+            <h1>Shree Amdavadi Dasha Srimali Jain Gyanti</h1>
+        </div>
+        <div class="Pages">
+            <div class="home">HOME</div>
+            <div class="addMem">ADD MEMBER</div>
+            <div class="MemList">MEMBER LIST</div>
+            <div class="addbloodGrp">ADD BLOOD GROUP</div>
+            <div class="addAreaMaster">ADD AREA MASTER</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const d = new Date();
+   
+    const fullDate = d.toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' });
+    document.getElementById("DatePara").innerText = ("Date : "+fullDate);
+
+    const time = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' });
+    document.getElementById("TimePara").innerText = "Time: " + time;
+
+    
+
+</script>
+</html>
